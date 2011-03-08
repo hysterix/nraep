@@ -1,0 +1,18 @@
+- 0.5 - 
+	- created 'ghetto tables' hidemyass port hashing lookup
+	- fixed proxy support
+	- added proxy testing/caching
+	- added support for more form fields
+	- added stealth logging mode
+
+- 0.4 - 
+	- added user-agent masker
+	- updated spam list (list.php)
+	- updates to gui (logo, css, etc.)
+
+- 0.3 - 
+	- added & integrated simple html dom library
+	- added split url library
+
+- 0.2 - 
+	- added curl multi-threading support

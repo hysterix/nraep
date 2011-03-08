@@ -1,0 +1,82 @@
+/*
+	Niggersplits - A corruption of niggertits
+*/
+
+body {
+	margin:0px;
+	border:0;
+	padding:0;
+	background:#000000;
+	color:#ffffff;
+	font-family:Courier New, Anadle Mono, verdana, sans-serif; 
+	font-size:84%;
+	overflow:auto;
+}
+
+.main {
+	position:relative;
+	top:70px;
+	left:100px;
+	width:600px;
+}
+
+.alert {
+	color:#ff0000;
+}
+
+.succeed {
+	color:#ffffff;
+}
+
+.logo {
+	position:relative;
+	top:5px;
+	left:0px;
+	height:auto;
+	width:auto;
+	text-align:right;
+}
+
+.title {
+	position:absolute;
+	top:-30px;
+	left:400px;
+	height:auto;
+	width:200px;
+}
+
+.largefont {
+	font-weight:bold;
+	font-size:32px;
+}
+
+.smallfont {
+	font-weight:bold;
+	font-size:14px;
+}
+
+.resulttype {
+	font-weight:bold;
+	font-size:16px;
+}
+
+.mainform {
+	position:relative;
+	top:10px;
+	left:-70px;
+	height:auto;
+	width:auto;
+}
+
+.loader {
+	position:absolute;
+	top:0px;
+	left:-50px;
+	width:400;
+	font-size:12px;
+}
+
+.cssfun {
+	position:relative;
+	left:-150px;
+}

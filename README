@@ -1,0 +1,62 @@
+
+			----------------------------------------------------
+			   	------------ nraep 0.5 ------------
+			----------------------------------------------------
+			   --------------- By: hysterix ---------------
+
+Requirements:
+ apache, php, curl
+
+Reason:
+	Because sometimes mothersfuckers need to get spammed.
+
+What:
+	Nraep goes through a list of web-site url's that contain newsletter sign up forums.
+	The sites have been (hopefully) preselected for ease of sign up which entails:
+	 - no captchas
+	 - no redirects
+	 - no cookies (that are required for submitting a form)
+	 - no javascript submits
+
+	Adding links to the list with these things won't really do much except slow down your execution time for working url's, so don't do it!
+	Nraep does not follow links, so putting home-pages that do not have forms directly on them is useless.
+	
+	This is just to 'sign up' for a newsletter, in the sense that the person may be signed up fully, or get an e-mail to confirm the response.  	    		They may not necessarily be signed up on the newsletter after using nraep if there is an opt-in, but those sites without a confirm opt-in do.
+
+How:
+	The default list currently signs up to a nigger-tits number of newsletters.  It gives about a 50% false positive success rate currently, so don't 	  be deceived by the pretty numbers.  This will be fixed in later versions
+
+	Site list:
+		The site list is currently an array inside the file includes/list.php file, and holds the spam list url's appropriated from partyvan 			(thanks!).  Hopefully this list will get epically large soon.
+
+Notes:
+	nraep supports curls multi-threading abilities in that you can set the maximum number of connections to be whatever you think your server 		and memory can handle.  Ten is the most efficient for me; and probably just fine for most, but edit the config.php if you want to up this amount.
+
+	hysterix offically hax0rd hidemyass.com.  Now nraep fully supports connecting to the target newsletter through a proxy instead of a direct 	 	 connection.  It will take a bit before a good proxy is found and cached, and you might pass over a few newsletters in the list during this time.
+	After a good proxy is found, the rest of the connections will most likely be successful, so simply be patient.  This is implemented through 
+	'ghetto tables'; a simple check of the hash of the image (port) compared to a premade lookup yields ports they thought were "hidden" to bots!
+	More info inside includes/proxy.php
+
+	nraep will cycle randomly through the user-agent string list set inside includes/config.php and won't reuse this between websites so if you using
+	this with a proxy you should be concealed fairly well.
+
+	nreap has a "stealth logging mode" which just means the ip address of the person using nreap is not logged (in the app itself). The default
+	is off, as I'd imagine most people would want to see the ip's connecting and using the app. (Should be using browser proxy if on a remote server 	 anyways).
+
+Todo:
+	- a fuckton!
+	- put together even larger, more epic spam newsletter list
+	- 'remainder' of sites, if division is not even, do not execute (list count / maximum connections) <- ex. 92 / 10 = 9 loops of 10, 2 sites at the 		  end don't get executed
+	- redirect/forwarding support when submitting a form
+	- cookie support when submitting a form
+	- javascript support when submitting a form
+	- expand newsletter validation function to handle more complex forms
+	- add more form fields of user information, enter your own or use defaults
+	- integrate a remote xml list over-ride/side-by-side feature to grab and use multiple lists simultaneously
+	- create "newsletter google dork" feature, find newsletters automagically using google = auto reap
+
+Credits:
+	curl class: David 	 - semlabs.co.uk
+ 	 split url: David Nadeau - NadeauSoftware.com
+   simple html dom: S.C. Chen 	 - http://sourceforge.net/projects/simplehtmldom/
+
